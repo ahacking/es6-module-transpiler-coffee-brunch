@@ -1,0 +1,32 @@
+{
+  "name": "es6-module-transpiler-coffee-brunch",
+  "version": "0.1.0",
+  "description": "Brunch plugin for coffee-script with es6-module-transpiler.",
+  "main": "index.js",
+  "author": "Andrew Hacking",
+  "license": "MIT",
+  "homepage": "https://github.com/ahacking/es6-module-transpiler-coffee-brunch",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahacking/es6-module-transpiler-coffee-brunch.git"
+  },
+  "keywords": [
+    "es6",
+    "transpiler",
+    "brunch"
+  ],
+  "bugs": {
+    "url": "https://github.com/ahacking/es6-module-transpiler-coffee-brunch/issues"
+  },
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  },
+  "dependencies": {
+    "coffee-script": "~1.8.0",
+    "es6-module-transpiler-js-brunch": "0.1.0"
+  },
+  "devDependencies": {
+    "mocha": "1.11.0",
+    "chai": "1.7.0"
+  }
+}
