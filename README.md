@@ -9,7 +9,7 @@ The **ES6 Module Transpiler** is an experimental compiler that allows you to wri
 **Warning: In my limited testing the ES6 module transpiler currently doesn't emit anything useful for typical CommonJS interoperability, so its effectively only useful for AMD.
 
 ## Motivation
-I am currently using this plugin to provide ember-cli equivalent ES6 module transpiling for coffees-cript but using brunch instead of ember-cli/broccoli because of performance regressions (as at 14 Sep 2014) render it unusable.  This shares the same configuration options as es6-module-transpiler-js.
+I am currently using this plugin to provide ember-cli equivalent ES6 module transpiling for coffee-script but using brunch instead of ember-cli/broccoli because performance regressions (as at 14 Sep 2014) render it unusable.  This shares the same configuration options as es6-module-transpiler-js.
 
 This plugin is intended more as a stop-gap measure to allow use of newer ES6 features in Javascript within a mixed code-base that also contains legacy coffee-script code.
 
@@ -43,7 +43,7 @@ The plugin will take all files ending in `*.coffee` under the `app` directory an
 
 The plugin has the following transpiler configuration options you can add to your project's `config.coffee`:
 * `match` is a regex used to decide what files to transpile,
-* `wrapper` specifies the module wrapper, eg 'amd' or cjs' (default) supported.
+* `wrapper` specifies the module wrapper, eg 'amd' (default) or 'cjs'.
 * `moduleName` a function that can be used to map module names as required.
 * `options` options to pass through verbatim to `es6-module-transpiler`.
 
@@ -52,7 +52,7 @@ The plugin has the following transpiler configuration options you can add to you
 **You must not use the coffee-script-brunch plugin as this plugin replaces its functionality.** Simply remove it from package.json and run ``npm prune``.
 
 ```coffeescript
-exports.config = 
+exports.config =
   modules:
     wrapper: false
   plugins:
